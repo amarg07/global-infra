@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: global
-          image: gcr.io/gcp-brightlab/amar-poc/global
+          image: gcr.io/gcp-brightlab/amar-poc/image_to_be_replace
           volumeMounts: 
           - mountPath: /global
             name: global-vol
