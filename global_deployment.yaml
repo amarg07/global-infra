@@ -13,12 +13,11 @@ spec:
         - name: global
           image: gcr.io/gcp-brightlab/amar-poc/image_to_be_replace
           volumeMounts: 
-          - mountPath: /global
+          - mountPath: /global-logs
             name: global-vol
           ports:
             - containerPort: 8000
       volumes:
         - name: global-vol
-          gcePersistentDisk:
-            pdName: jenkins-test
-            fsType: ext4
+          PersistentVolumeClaim:
+            claimName: global-claim
