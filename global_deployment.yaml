@@ -19,5 +19,5 @@ spec:
             - containerPort: 8000
       volumes:
         - name: global-vol
-          PersistentVolumeClaim:
+          persistentVolumeClaim:
             claimName: global-claim
